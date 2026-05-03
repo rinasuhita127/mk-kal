@@ -4,8 +4,6 @@ Scripts/
 Include/
 pyvenv.cfg
 
-# Abaikan folder hasil build/output
-_build/
 
 # Abaikan cache Python
 **/__pycache__/
