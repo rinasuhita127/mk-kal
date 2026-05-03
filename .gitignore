@@ -1,0 +1,12 @@
+# Abaikan folder Virtual Environment
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
+
+# Abaikan folder hasil build/output
+_build/
+
+# Abaikan cache Python
+**/__pycache__/
+*.pyc
