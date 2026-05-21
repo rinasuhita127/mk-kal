@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'TM_KAL_Final';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dekomposisi QR Matriks 4×4" href="T7.html" />
     <link rel="prev" title="Matriks Transformasi" href="T5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -175,6 +176,13 @@
 
 <li class="toctree-l1"><a class="reference internal" href="T5.html">Matriks Transformasi</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Transformasi Linear Geometri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="T7.html">Dekomposisi QR Matriks 4×4</a></li>
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -662,42 +670,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img13e8b37a5b9b42efaca3cdc0d80bbcd1">
+  <img id="_anim_img194097ecc0df455fb95e54756bffb2a7">
   <div class="anim-controls">
-    <input id="_anim_slider13e8b37a5b9b42efaca3cdc0d80bbcd1" type="range" class="anim-slider"
+    <input id="_anim_slider194097ecc0df455fb95e54756bffb2a7" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.set_frame(parseInt(this.value));">
+           oninput="anim194097ecc0df455fb95e54756bffb2a7.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim194097ecc0df455fb95e54756bffb2a7.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim194097ecc0df455fb95e54756bffb2a7.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim194097ecc0df455fb95e54756bffb2a7.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim194097ecc0df455fb95e54756bffb2a7.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim194097ecc0df455fb95e54756bffb2a7.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim194097ecc0df455fb95e54756bffb2a7.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim194097ecc0df455fb95e54756bffb2a7.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim194097ecc0df455fb95e54756bffb2a7.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim13e8b37a5b9b42efaca3cdc0d80bbcd1.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim194097ecc0df455fb95e54756bffb2a7.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select13e8b37a5b9b42efaca3cdc0d80bbcd1"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select194097ecc0df455fb95e54756bffb2a7"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_13e8b37a5b9b42efaca3cdc0d80bbcd1"
+      <input type="radio" name="state" value="once" id="_anim_radio1_194097ecc0df455fb95e54756bffb2a7"
              >
-      <label for="_anim_radio1_13e8b37a5b9b42efaca3cdc0d80bbcd1">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_13e8b37a5b9b42efaca3cdc0d80bbcd1"
+      <label for="_anim_radio1_194097ecc0df455fb95e54756bffb2a7">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_194097ecc0df455fb95e54756bffb2a7"
              checked>
-      <label for="_anim_radio2_13e8b37a5b9b42efaca3cdc0d80bbcd1">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_13e8b37a5b9b42efaca3cdc0d80bbcd1"
+      <label for="_anim_radio2_194097ecc0df455fb95e54756bffb2a7">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_194097ecc0df455fb95e54756bffb2a7"
              >
-      <label for="_anim_radio3_13e8b37a5b9b42efaca3cdc0d80bbcd1">Reflect</label>
+      <label for="_anim_radio3_194097ecc0df455fb95e54756bffb2a7">Reflect</label>
     </form>
   </div>
 </div>
@@ -707,9 +715,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img13e8b37a5b9b42efaca3cdc0d80bbcd1";
-    var slider_id = "_anim_slider13e8b37a5b9b42efaca3cdc0d80bbcd1";
-    var loop_select_id = "_anim_loop_select13e8b37a5b9b42efaca3cdc0d80bbcd1";
+    var img_id = "_anim_img194097ecc0df455fb95e54756bffb2a7";
+    var slider_id = "_anim_slider194097ecc0df455fb95e54756bffb2a7";
+    var loop_select_id = "_anim_loop_select194097ecc0df455fb95e54756bffb2a7";
     var frames = new Array(120);
     
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAK8CAYAAAANumxDAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -49597,7 +49605,7 @@ HOE6EH6lAAAAAElFTkSuQmCC\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim13e8b37a5b9b42efaca3cdc0d80bbcd1 = new Animation(frames, img_id, slider_id, 25.0,
+        anim194097ecc0df455fb95e54756bffb2a7 = new Animation(frames, img_id, slider_id, 25.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -49645,6 +49653,15 @@ HOE6EH6lAAAAAElFTkSuQmCC\
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Matriks Transformasi</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="T7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dekomposisi QR Matriks 4×4</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
