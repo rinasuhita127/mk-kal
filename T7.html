@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Materi KAL &#8212; My sample book</title>
+    <title>Dekomposisi QR Matriks 4×4 &#8212; My sample book</title>
   
   
   
@@ -62,10 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'T7';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sistem Persamaan Linear" href="T1.html" />
+    <link rel="prev" title="Transformasi Linear Geometri" href="TM_KAL_Final.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -117,8 +117,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -138,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -165,20 +163,21 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Materi KAL
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="T1.html">Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="T2.html">Penyelesaian Sistem Persamaan Linear Menggunakan Eliminasi Guassian</a></li>
 <li class="toctree-l1"><a class="reference internal" href="T3.html">Mencari invers matriks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="T4.html">A. Hitunglah determinan matrik berikut dengan menggunakan rumus expansi baris</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="T5.html">Matriks Transformasi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TM_KAL_Final.html">Transformasi Linear Geometri</a></li>
-<li class="toctree-l1"><a class="reference internal" href="T7.html">Dekomposisi QR Matriks 4×4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dekomposisi QR Matriks 4×4</a></li>
 </ul>
 
     </div>
@@ -255,7 +254,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FT7.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +284,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/T7.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +347,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -359,11 +360,26 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Materi KAL</h1>
+    <h1>Dekomposisi QR Matriks 4×4</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-menentukan-q-1">Langkah 1 — Menentukan <span class="math notranslate nohighlight">\(q_1\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-menentukan-q-2">Langkah 2 — Menentukan <span class="math notranslate nohighlight">\(q_2\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-menentukan-q-3">Langkah 3 — Menentukan <span class="math notranslate nohighlight">\(q_3\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-menentukan-q-4">Langkah 4 — Menentukan <span class="math notranslate nohighlight">\(q_4\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-q">Matriks <span class="math notranslate nohighlight">\(Q\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-r">Matriks <span class="math notranslate nohighlight">\(R\)</span></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -373,32 +389,278 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="materi-kal">
-<h1>Materi KAL<a class="headerlink" href="#materi-kal" title="Link to this heading">#</a></h1>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Data</p></th>
-<th class="head"><p>Keterangan</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Nama</p></td>
-<td><p>Rina Suhita</p></td>
-</tr>
-<tr class="row-odd"><td><p>NIM</p></td>
-<td><p>250411100067</p></td>
-</tr>
-<tr class="row-even"><td><p>Prodi</p></td>
-<td><p>Teknik Informatika</p></td>
-</tr>
-<tr class="row-odd"><td><p>Kelas</p></td>
-<td><p>IF2D</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="dekomposisi-qr-matriks-44">
+<h1>Dekomposisi QR Matriks 4×4<a class="headerlink" href="#dekomposisi-qr-matriks-44" title="Link to this heading">#</a></h1>
+<p>Diberikan matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=
+\begin{bmatrix}
+7 &amp; 2 &amp; 9 &amp; 1\\
+4 &amp; 8 &amp; 3 &amp; 6\\
+5 &amp; 0 &amp; 2 &amp; 7\\
+1 &amp; 6 &amp; 8 &amp; 4
+\end{bmatrix}
+\end{split}\]</div>
+<section id="langkah-1-menentukan-q-1">
+<h2>Langkah 1 — Menentukan <span class="math notranslate nohighlight">\(q_1\)</span><a class="headerlink" href="#langkah-1-menentukan-q-1" title="Link to this heading">#</a></h2>
+<p>Kolom pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+a_1=
+\begin{bmatrix}
+7\\
+4\\
+5\\
+1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Norm vektor:</p>
+<div class="math notranslate nohighlight">
+\[
+\|a_1\|
+=
+\sqrt{7^2+4^2+5^2+1^2}
+=
+\sqrt{91}
+\]</div>
+<p>Normalisasi:</p>
+<div class="math notranslate nohighlight">
+\[
+q_1=\frac{a_1}{\|a_1\|}
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+q_1=
+\begin{bmatrix}
+\frac7{\sqrt{91}}\\
+\frac4{\sqrt{91}}\\
+\frac5{\sqrt{91}}\\
+\frac1{\sqrt{91}}
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="langkah-2-menentukan-q-2">
+<h2>Langkah 2 — Menentukan <span class="math notranslate nohighlight">\(q_2\)</span><a class="headerlink" href="#langkah-2-menentukan-q-2" title="Link to this heading">#</a></h2>
+<p>Kolom kedua:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+a_2=
+\begin{bmatrix}
+2\\
+8\\
+0\\
+6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Hitung proyeksi:</p>
+<div class="math notranslate nohighlight">
+\[
+a_2 \cdot q_1
+=
+\frac{2(7)+8(4)+0(5)+6(1)}{\sqrt{91}}
+=
+\frac{52}{\sqrt{91}}
+\]</div>
+<p>Vektor ortogonal:</p>
+<div class="math notranslate nohighlight">
+\[
+v_2
+=
+a_2-(a_2\cdot q_1)q_1
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_2=
+\begin{bmatrix}
+2\\
+8\\
+0\\
+6
+\end{bmatrix}
+-
+\frac{52}{91}
+\begin{bmatrix}
+7\\
+4\\
+5\\
+1
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_2=
+\begin{bmatrix}
+-2\\
+\frac{520}{91}\\
+-\frac{260}{91}\\
+\frac{494}{91}
+\end{bmatrix}
+\end{split}\]</div>
+<p>Norm:</p>
+<div class="math notranslate nohighlight">
+\[
+\|v_2\|\approx 8.44
+\]</div>
+<p>Normalisasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+q_2 \approx
+\begin{bmatrix}
+-0.237\\
+0.675\\
+-0.338\\
+0.642
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="langkah-3-menentukan-q-3">
+<h2>Langkah 3 — Menentukan <span class="math notranslate nohighlight">\(q_3\)</span><a class="headerlink" href="#langkah-3-menentukan-q-3" title="Link to this heading">#</a></h2>
+<p>Kolom ketiga:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+a_3=
+\begin{bmatrix}
+9\\
+3\\
+2\\
+8
+\end{bmatrix}
+\end{split}\]</div>
+<p>Kurangi proyeksi terhadap <span class="math notranslate nohighlight">\(q_1\)</span> dan <span class="math notranslate nohighlight">\(q_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v_3
+=
+a_3
+-
+(a_3\cdot q_1)q_1
+-
+(a_3\cdot q_2)q_2
+\]</div>
+<p>Hasil:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_3 \approx
+\begin{bmatrix}
+2.70\\
+-2.07\\
+-2.59\\
+4.74
+\end{bmatrix}
+\end{split}\]</div>
+<p>Norm:</p>
+<div class="math notranslate nohighlight">
+\[
+\|v_3\|\approx 6.30
+\]</div>
+<p>Normalisasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+q_3 \approx
+\begin{bmatrix}
+0.429\\
+-0.329\\
+-0.411\\
+0.752
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="langkah-4-menentukan-q-4">
+<h2>Langkah 4 — Menentukan <span class="math notranslate nohighlight">\(q_4\)</span><a class="headerlink" href="#langkah-4-menentukan-q-4" title="Link to this heading">#</a></h2>
+<p>Kolom keempat:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+a_4=
+\begin{bmatrix}
+1\\
+6\\
+7\\
+4
+\end{bmatrix}
+\end{split}\]</div>
+<p>Kurangi proyeksi terhadap semua vektor sebelumnya:</p>
+<div class="math notranslate nohighlight">
+\[
+v_4
+=
+a_4
+-
+(a_4\cdot q_1)q_1
+-
+(a_4\cdot q_2)q_2
+-
+(a_4\cdot q_3)q_3
+\]</div>
+<p>Hasil:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_4 \approx
+\begin{bmatrix}
+-3.16\\
+0.52\\
+1.85\\
+1.12
+\end{bmatrix}
+\end{split}\]</div>
+<p>Norm:</p>
+<div class="math notranslate nohighlight">
+\[
+\|v_4\|\approx 3.84
+\]</div>
+<p>Normalisasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+q_4 \approx
+\begin{bmatrix}
+-0.823\\
+0.135\\
+0.482\\
+0.292
+\end{bmatrix}
+\end{split}\]</div>
+<hr class="docutils" />
+<section id="matriks-q">
+<h3>Matriks <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#matriks-q" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q \approx
+\begin{bmatrix}
+0.734 &amp; -0.237 &amp; 0.429 &amp; -0.823\\
+0.419 &amp; 0.675 &amp; -0.329 &amp; 0.135\\
+0.524 &amp; -0.338 &amp; -0.411 &amp; 0.482\\
+0.105 &amp; 0.642 &amp; 0.752 &amp; 0.292
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="matriks-r">
+<h3>Matriks <span class="math notranslate nohighlight">\(R\)</span><a class="headerlink" href="#matriks-r" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+R = Q^TA
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R \approx
+\begin{bmatrix}
+9.539 &amp; 5.451 &amp; 10.902 &amp; 6.080\\
+0 &amp; 8.442 &amp; 4.264 &amp; 6.756\\
+0 &amp; 0 &amp; 6.299 &amp; 2.344\\
+0 &amp; 0 &amp; 0 &amp; 3.839
+\end{bmatrix}
+\end{split}\]</div>
+<hr class="docutils" />
+<p>Sehingga diperoleh:</p>
+<div class="math notranslate nohighlight">
+\[
+A = QR
+\]</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -431,14 +693,14 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="T1.html"
-       title="next page">
+    <a class="left-prev"
+       href="TM_KAL_Final.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Sistem Persamaan Linear</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Transformasi Linear Geometri</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -446,6 +708,30 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-menentukan-q-1">Langkah 1 — Menentukan <span class="math notranslate nohighlight">\(q_1\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-menentukan-q-2">Langkah 2 — Menentukan <span class="math notranslate nohighlight">\(q_2\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-menentukan-q-3">Langkah 3 — Menentukan <span class="math notranslate nohighlight">\(q_3\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-menentukan-q-4">Langkah 4 — Menentukan <span class="math notranslate nohighlight">\(q_4\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-q">Matriks <span class="math notranslate nohighlight">\(Q\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-r">Matriks <span class="math notranslate nohighlight">\(R\)</span></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
